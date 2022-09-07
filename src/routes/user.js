@@ -1,7 +1,7 @@
+const { userController } = require("../controllers");
+
 const userRoutes = (app) => {
-  app.route("/users").post((req, res) => {
-    return res.send("post route");
-  });
+  app.route("/users").post(userController.create);
   return;
 };
 
