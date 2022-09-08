@@ -9,19 +9,21 @@ exports.create = async (req, res) => {
       .json({ error: true, message: "username or password must not be null" });
   }
 
-  const userModel = new User();
+  const userModel = new User(payload);
 
-  await userModel
-    .creteNewUser({ ...payload })
-    .then(() => {
-      return res.status(201).jsoN({ error: false, message: "created" });
-    })
-    .catch((error) => {
-      console.log(error);
-      return (
-        res
-          // .status(error.status)
-          .json({ error: true, message: error.message })
-      );
-    });
+  return res.json({ userModel });
+
+  // await userModel
+  //   .creteNewUser({ ...payload })
+  //   .then(() => {
+  //     return res.status(201).jsoN({ error: false, message: "created" });
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //     return (
+  //       res
+  //         // .status(error.status)
+  //         .json({ error: true, message: error.message })
+  //     );
+  //   });
 };
