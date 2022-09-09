@@ -1,8 +1,3 @@
-export interface IUser {
-  username: string;
-  password: string;
-  created_at?: string;
-  updated_at?: string;
-}
+import { IUser } from "../types";
 
 export interface IUserModel extends IUser {}
