@@ -1,7 +1,7 @@
 import { IUser } from "../types/index.js";
 import { isEmpty } from "./isEmpty.js";
 
-const isValidUserFields = (user: IUser) => {
+export function isValidUserFields(user: IUser) {
   const msg = "can't be null";
   const defaultMsg = "can not post empty user";
   const errors: string[] = [];
@@ -23,4 +23,4 @@ const isValidUserFields = (user: IUser) => {
   }
 
   return true;
-};
+}
