@@ -1,7 +1,6 @@
 import { Express } from "express";
+import notFund from "./notFound.js";
 
 export default function (app: Express) {
-  app.get("/", (req, res) => {
-    return res.send("ok");
-  });
+  notFund(app);
 }
