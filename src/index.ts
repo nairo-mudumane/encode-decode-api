@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
+import { PORT } from "./config/port.js";
 
 const app = express();
-const PORT = 3322;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
