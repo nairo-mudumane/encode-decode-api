@@ -5,4 +5,8 @@ export interface IUser {
   updated_at?: string;
 }
 
-export interface IUserModel extends IUser {}
+export declare class IClassUser {
+  constructor(payload?: IUser);
+  public checkUSer: (user?: IUser) => boolean;
+  public formatUser: (user?: IUser) => IUser;
+}
